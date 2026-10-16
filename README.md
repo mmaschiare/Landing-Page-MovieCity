@@ -1,121 +1,242 @@
-🎬 MovieCity — Landing Page
+# 🎬 MovieCity
 
-Landing page responsiva de um serviço de streaming fictício, construída com React + Vite. O objetivo do projeto é ser um exercício prático de componentização, estilização com CSS puro e adaptação de layout para diferentes tamanhos de tela.
+### Seu próximo filme favorito está aqui.
 
-Mostrar Imagem Mostrar Imagem Mostrar Imagem
+O **MovieCity** é uma landing page responsiva inspirada em plataformas de streaming, desenvolvida com React e Vite. O projeto apresenta uma seleção de filmes em uma interface visual moderna, com navegação adaptável para computadores, tablets e dispositivos móveis.
 
-📌 Sumário
-O que o projeto faz
-Tecnologias utilizadas
-Pré-requisitos
-Como rodar
-Estrutura de pastas
-Como as partes se conectam
-Responsividade
-Scripts disponíveis
-Próximos passos / ideias
-🎯 O que o projeto faz
+A aplicação foi criada com foco na prática de desenvolvimento front-end, componentização, organização de código e construção de layouts utilizando CSS puro.
 
-A página é dividida em duas áreas principais:
+---
 
-Header (cabeçalho): logo "MovieCity", menu de navegação (Filmes, Categoria, Sobre, Contato) e um botão de Login.
-Main (conteúdo principal): uma coluna com texto de chamada ("Seus Filmes") + botão Mais, e outra coluna com um grid de 6 cards de filmes (Afterlife, Transformers, Mowgli, Shift, Round 6 e Harry Potter).
+## 🖥️ Visão geral
 
-Em telas pequenas, as duas colunas se empilham, o grid de cards passa a ter 2 colunas e o menu de navegação vira um menu hambúrguer que abre e fecha.
+**Principais características**
 
-🧰 Tecnologias utilizadas
-Tecnologia	Para que serve
-React 19	Biblioteca de UI baseada em componentes
-Vite 7	Servidor de desenvolvimento com HMR e bundler de produção
-JavaScript (ESM)	Linguagem e sistema de módulos
-CSS puro	Estilização global e responsividade (media queries)
-ESLint	Padronização e análise estática do código
+- 🎞️ Catálogo visual com cards de filmes.
+- 🧭 Cabeçalho com navegação entre seções.
+- 🔐 Botão de acesso à área de login.
+- 📱 Layout adaptável a diferentes resoluções.
+- ☰ Menu hambúrguer para dispositivos menores.
+- 🎨 Estilização personalizada com CSS.
+- ⚛️ Interface construída com componentes React.
 
-Nenhuma biblioteca de UI (Bootstrap, Tailwind, styled-components) é usada de propósito: o objetivo é praticar CSS de verdade.
+### 📸 Prévia do projeto
 
-✅ Pré-requisitos
-Node.js 20.19+ ou 22.12+ (o Vite 7 exige essas versões)
-npm (já vem junto com o Node.js) — ou yarn/pnpm, se preferir
-Um editor de código, como o VS Code
+Adicione abaixo as capturas de tela da aplicação:
 
-Confira as versões instaladas:
+<!-- Substitua os caminhos pelas imagens reais do projeto. -->
 
-bash
+| Desktop | Tablet | Mobile |
+|:---:|:---:|:---:|
+| Adicione uma imagem | Adicione uma imagem | Adicione uma imagem |
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Aplicação no projeto |
+|---|---|
+| React 19 | Construção da interface por componentes |
+| Vite 7 | Ambiente de desenvolvimento e build |
+| JavaScript | Lógica e funcionalidades da aplicação |
+| CSS3 | Estilização, layouts e responsividade |
+| ESLint | Análise e padronização do código |
+| HTML5 | Estrutura principal da página |
+
+O projeto utiliza CSS puro, sem frameworks de estilização, para reforçar o aprendizado de Flexbox, CSS Grid, media queries e organização dos estilos.
+
+---
+
+## 📋 Requisitos para execução
+
+Antes de iniciar, você precisará de:
+
+- Node.js compatível com a versão do Vite utilizada.
+- npm, instalado junto com o Node.js.
+- Visual Studio Code ou outro editor de sua preferência.
+- Navegador atualizado.
+
+Verifique as versões instaladas:
+
+```bash
 node -v
 npm -v
-🚀 Como rodar
-bash
-# 1. Instalar as dependências
+```
+
+---
+
+## 🚀 Instalação e execução
+
+Siga as etapas abaixo para executar o MovieCity localmente.
+
+**1. Clone o repositório**
+
+```bash
+git clone URL_DO_SEU_REPOSITORIO
+```
+
+**2. Entre na pasta do projeto**
+
+```bash
+cd MovieCity
+```
+
+Ajuste o caminho caso o projeto esteja em uma subpasta.
+
+**3. Instale as dependências**
+
+```bash
 npm install
+```
 
-# 2. Subir o servidor de desenvolvimento
+**4. Inicie o servidor de desenvolvimento**
+
+```bash
 npm run dev
+```
 
-O Vite abre em http://localhost:5173. Cada vez que você salvar um arquivo, a página atualiza sozinha (HMR — Hot Module Replacement).
+**5. Acesse a aplicação**
 
-Para conferir o layout, abra o DevTools (F12), ative o Device Toolbar (Ctrl + Shift + M) e teste nas larguras 1440px, 1024px, 768px, 600px e 375px, confirmando que não aparece barra de rolagem horizontal.
+Abra no navegador o endereço informado pelo Vite, normalmente:
 
-Antes de considerar pronto:
+`http://localhost:5173`
 
-bash
-npm run lint
-npm run build
+As alterações salvas nos arquivos são refletidas automaticamente durante o desenvolvimento.
 
-O build gera a pasta dist/, pronta para publicar em qualquer host estático (Netlify, Vercel, GitHub Pages, etc.). Para pré-visualizar o resultado: npm run preview.
+---
 
-📁 Estrutura de pastas
-01_landinpage/
+## 📂 Organização do projeto
+
+```text
+MovieCity/
 ├── public/
-│   └── vite.svg              # favicon
+│   └── vite.svg
 ├── src/
-│   ├── assets/               # imagens dos pôsteres
+│   ├── assets/
+│   │   └── imagens dos filmes
 │   ├── components/
-│   │   ├── Header.jsx        # cabeçalho + menu hambúrguer
-│   │   ├── Main.jsx          # texto de chamada + grid de filmes
-│   │   └── Home.jsx          # container da página
-│   ├── App.jsx               # renderiza <Home />
-│   ├── index.css             # estilos globais + responsividade
-│   └── main.jsx              # ponto de entrada do React
-├── index.html                # HTML raiz (lang, título, metadados)
+│   │   ├── Header.jsx
+│   │   ├── Main.jsx
+│   │   └── Home.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
 ├── eslint.config.js
 ├── package.json
+├── package-lock.json
 └── vite.config.js
-🔗 Como as partes se conectam
-index.html → main.jsx → App.jsx → Home.jsx ─┬─→ Header.jsx
-                                             └─→ Main.jsx
-index.html contém apenas <div id="root"> e o script de entrada.
-main.jsx usa createRoot() para renderizar o <App /> dentro dessa div.
-App.jsx importa o CSS global e renderiza <Home />.
-Home.jsx monta <Header /> e <Main />.
-Os componentes usam className, e todo o visual vem de src/index.css.
-📱 Responsividade
+```
 
-O layout foi construído mobile-friendly desde a base e usa quatro breakpoints:
+*Observação: a estrutura acima representa a organização descrita para o projeto. Os arquivos e as pastas devem corresponder à versão atual do repositório.*
 
-Breakpoint	Alvo	O que muda
-max-width: 1100px	Tablets em paisagem	Espaçamentos, gaps e tipografia menores
-max-width: 900px	Tablets retrato / celulares grandes	Colunas empilham, texto centralizado, menu hambúrguer aparece
-max-width: 600px	Celulares	Grid de cards passa para 2 colunas, fontes e paddings reduzidos
-max-width: 380px	Celulares pequenos	Ajustes finos de fonte e altura dos cards
+---
 
-Técnicas usadas:
+## ⚙️ Arquitetura da aplicação
 
-Unidades relativas (%, minmax(0, 1fr), max-height) em vez de larguras fixas, exceto alturas de card, que são controladas por breakpoint.
-Flexbox para as colunas do main e para o alinhamento do header.
-CSS Grid com minmax(0, ...) para os cards, evitando que o conteúdo force a coluna a crescer além do container.
-Menu hambúrguer só com CSS: no desktop a nav é normal; abaixo de 900px ela vira um painel com position: absolute animado via max-height.
-min-height: 100vh no .home em vez de height: 100vh, para o conteúdo poder crescer sem ser cortado em telas baixas.
-Acessibilidade: o botão do menu tem aria-label e aria-expanded, e o menu fecha ao clicar em qualquer link.
-📜 Scripts disponíveis
-Comando	Descrição
-npm run dev	Inicia o servidor de desenvolvimento com HMR em http://localhost:5173
-npm run build	Gera a versão otimizada de produção em dist/
-npm run preview	Serve localmente o build de dist/ para conferência
-npm run lint	Roda o ESLint em todo o projeto
-💡 Próximos passos / ideias
-Substituir os divs dos cards por botões <button> para melhorar a acessibilidade e o teclado.
-Dar título e nota a cada filme, deixando os cards mais informativos.
-Buscar a lista de filmes de uma API (ex.: TMDB) e renderizar os cards dinamicamente com .map().
-Transformar os cards em um carrossel horizontal no mobile.
-Adicionar prefers-reduced-motion para desativar as animações de hover em quem preferir.
-Migrar o CSS para CSS Modules ou para uma solução por componente conforme o projeto crescer.
+A interface é dividida em componentes com responsabilidades específicas:
+
+- **`main.jsx`** — inicializa a aplicação React.
+- **`App.jsx`** — componente principal da aplicação.
+- **`Home.jsx`** — organiza os componentes da página inicial.
+- **`Header.jsx`** — contém a identidade visual e a navegação.
+- **`Main.jsx`** — apresenta o conteúdo principal e os cards de filmes.
+- **`index.css`** — concentra os estilos globais e as regras responsivas.
+
+### Fluxo de renderização
+
+```text
+index.html
+    │
+    ▼
+main.jsx
+    │
+    ▼
+App.jsx
+    │
+    ▼
+Home.jsx
+    ├── Header.jsx
+    └── Main.jsx
+```
+
+Essa divisão facilita a manutenção, a reutilização de componentes e a evolução da interface.
+
+---
+
+## 📱 Design responsivo
+
+O MovieCity adapta sua estrutura de acordo com o tamanho da tela.
+
+| Resolução | Comportamento |
+|---|---|
+| Acima de 1100px | Layout amplo para desktops |
+| Até 1100px | Ajustes de espaçamento e tipografia |
+| Até 900px | Conteúdo reorganizado e menu compacto |
+| Até 600px | Cards distribuídos em duas colunas |
+| Até 380px | Ajustes para telas menores |
+
+### Recursos de responsividade
+
+- Flexbox para alinhamento e distribuição de elementos.
+- CSS Grid para organização do catálogo.
+- Media queries para adaptação dos componentes.
+- Unidades flexíveis para evitar estouro de conteúdo.
+- Menu hambúrguer para facilitar a navegação em telas menores.
+
+---
+
+## 🧪 Verificação e build
+
+O projeto disponibiliza comandos para validar o código e gerar uma versão de produção.
+
+| Comando | Finalidade |
+|---|---|
+| `npm run dev` | Inicia o ambiente de desenvolvimento |
+| `npm run lint` | Analisa o código com ESLint |
+| `npm run build` | Gera os arquivos de produção |
+| `npm run preview` | Permite visualizar a versão compilada localmente |
+
+Para verificar a aplicação antes da publicação:
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+Após o build, os arquivos otimizados são gerados na pasta `dist/`.
+
+---
+
+## 🔮 Melhorias futuras
+
+O MovieCity pode evoluir com a implementação de novos recursos:
+
+- [ ] Integrar uma API de filmes, como a TMDB.
+- [ ] Exibir sinopses, gêneros, avaliações e datas de lançamento.
+- [ ] Criar páginas individuais para os filmes.
+- [ ] Implementar pesquisa e filtros por categoria.
+- [ ] Adicionar um sistema funcional de autenticação.
+- [ ] Criar listas de favoritos.
+- [ ] Desenvolver um carrossel de filmes.
+- [ ] Melhorar a navegação por teclado e os recursos de acessibilidade.
+- [ ] Publicar a aplicação para acesso online.
+
+As funcionalidades listadas são sugestões de evolução e não representam necessariamente recursos já implementados.
+
+---
+
+## 🎯 Objetivo de aprendizagem
+
+Este projeto tem como objetivo consolidar conhecimentos de desenvolvimento front-end por meio da criação de uma interface responsiva e organizada, explorando a composição de componentes React, a estilização com CSS e o fluxo de desenvolvimento com Vite.
+
+---
+
+## 👨‍💻 Desenvolvimento
+
+**MovieCity — Projeto de estudo em desenvolvimento web.**
+
+Construído com React, JavaScript e CSS, com foco em aprendizado prático, organização e evolução contínua.
+
+⭐ Se você gostou do projeto, considere deixar uma estrela no repositório!
